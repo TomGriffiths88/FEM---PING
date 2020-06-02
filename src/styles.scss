@@ -108,7 +108,7 @@ body {
 
     @media (min-width: 35rem) {
       flex-basis: 60%;
-      //   margin-bottom: 1rem;
+      margin-bottom: 1rem;
     }
 
     &::placeholder {
@@ -135,7 +135,7 @@ body {
       margin-top: 0;
       flex-basis: 35%;
       margin-left: 1rem;
-      //   margin-bottom: 1rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -157,13 +157,18 @@ body {
     border-color: $color-light-red;
   }
 
-  &--active {
+  &--input-invalid,
+  &--input-success {
     margin-bottom: 1rem;
     margin-top: 1rem;
 
     @media (min-width: 35rem) {
       margin-bottom: 0;
     }
+  }
+
+  &--input-success {
+    color: black;
   }
 }
 
