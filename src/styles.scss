@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+//variables
+
+$color-primary: hsl(223, 87%, 63%);
+$color-pale-blue: hsl(223, 100%, 88%);
+$color-light-red: hsl(354, 100%, 66%);
+$color-grey: hsl(0, 0%, 59%);
+$color-dark-blue: hsl(209, 33%, 12%);
+
+//reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 2rem;
+  background: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 8rem 3rem;
+  padding-bottom: 6rem;
+  min-height: 100vh;
+
+  @media (min-width: 35rem) {
+    padding: 6rem 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.main {
+  text-align: center;
+  max-width: 55rem;
+
+  &__heading {
+    color: $color-grey;
+    font-weight: 300;
+    margin-top: 4rem;
+    font-size: 2.2rem;
+
+    @media (min-width: 35rem) {
+      font-size: 3.8rem;
+      margin-top: 2.2rem;
+    }
+
+    span {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+
+  &__copy {
+    margin-top: 1.9rem;
+    font-size: 1.2rem;
+    @media (min-width: 35rem) {
+      font-size: 1.6rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  max-width: 100%;
+  width: 100%;
+  padding: 2rem;
+
+  @media (min-width: 35rem) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  &__input,
+  &__submit {
+    font-family: inherit;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 2.5rem;
+    outline: none;
+    width: 100%;
+  }
+
+  &__input {
+    border: 1px solid $color-pale-blue;
+    outline: none;
+    font-weight: 300;
+    padding: 1.3rem 3rem;
+    transition: 0.3s all ease;
+    order: 1;
+
+    @media (min-width: 35rem) {
+      flex-basis: 60%;
+      //   margin-bottom: 1rem;
+    }
+
+    &::placeholder {
+      opacity: 0.4;
+    }
+  }
+
+  &__submit {
+    background-color: $color-primary;
+    border: none;
+    color: white;
+    font-weight: 600;
+    margin-top: 2rem;
+    box-shadow: 0 0.6rem 1rem $color-pale-blue;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    order: 3;
+
+    &:hover {
+      background: rgba($color-primary, 0.8);
+    }
+
+    @media (min-width: 35rem) {
+      margin-top: 0;
+      flex-basis: 35%;
+      margin-left: 1rem;
+      //   margin-bottom: 1rem;
+    }
+  }
+
+  &__feedback {
+    font-size: 1rem;
+    color: $color-light-red;
+    order: 2;
+    transition: all 0.3s ease;
+
+    @media (min-width: 35rem) {
+      flex-basis: 100%;
+      text-align: left;
+      margin-left: 3rem;
+      order: 3;
+    }
+  }
+
+  &--invalid {
+    border-color: $color-light-red;
+  }
+
+  &--active {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    @media (min-width: 35rem) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.logo {
+  width: 5.5rem;
+}
+
+.socials {
+  display: flex;
+  list-style-type: none;
+  margin-top: auto;
+
+  &__item {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba($color-grey, 0.2);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $color-primary;
+    }
+
+    &:hover > .socials__link {
+      color: white;
+    }
+
+    @media (min-width: 35rem) {
+      height: 2.7rem;
+      width: 2.7rem;
+      font-size: 1.3rem;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__link {
+    color: $color-primary;
+  }
+}
+
+.copyright {
+  font-size: 1rem;
+  color: $color-grey;
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 100%;
+  margin-top: 4.8rem;
+
+  @media (min-width: 35rem) {
+    margin-top: 4rem;
+  }
+}
+
+.attribution {
+  display: none;
+}

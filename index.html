@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <main class="main">
+        <img src="/images/logo.svg" alt="logo" class="logo" />
+        <h1 class="main__heading">We are launching <span>soon!</span></h1>
+        <p class="main__copy">Subscribe and get notified</p>
+        <form class="form">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="form__input"
+            placeholder="Your email address.."
+          />
+          <input type="submit" value="Notify Me" class="form__submit" />
+          <p class="form__feedback"></p>
+        </form>
+        <img
+          src="/images/illustration-dashboard.png"
+          alt="illustration"
+          class="hero-img"
+        />
+      </main>
+
+      <ul class="socials">
+        <li class="socials__item">
+          <a href="#" class="socials__link"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+      <p class="copyright">
+        &copy; Copyright Ping. All rights reserved.
+      </p>
+    </div>
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+    <script src="src/js/index.js"></script>
+  </body>
+</html>
